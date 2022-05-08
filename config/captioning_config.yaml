@@ -1,0 +1,11 @@
+train_annotation: datasets/annotations/trainset_highest_f1.json
+test_annotation: datasets/annotations/testset_highest_f1.json
+val_annotation: datasets/annotations/valset_highest_f1.json
+
+train_gebd_proposals: datasets/annotations/trainset_gebd_proposals.json
+test_gebd_proposals: datasets/annotations/testset_gebd_proposals.json
+val_gebd_proposals: datasets/annotations/valset_gebd_proposals.json
+
+region_feature_root: datasets/features/region_feature
+action_feature_root: datasets/features/tsn_captioning_feature
+action_feature_gebd_root: datasets/features/tsn_gebd_feature
