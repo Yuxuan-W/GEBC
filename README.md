@@ -6,7 +6,7 @@ Download the package https://github.com/LuoweiZhou/coco-caption/tree/de6f385503a
 `GEBC/utils/pycocoevalcap`
 
 ## Preparing features
-Download and unzip the features from our listed google drive link, make sure you have the following path:
+Download and unzip the features from our listed google drive link: https://drive.google.com/drive/folders/1E-KML1rU_gd6CF4nkkNG8Jm3Cq6VBYRR?usp=sharing, make sure you have the following path:
 
 `GEBC/datasets/features/region_feature`
 
