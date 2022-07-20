@@ -26,7 +26,7 @@ Note that our paper uses version a) in the evaluation of our model, please also 
 ## Using Our Baseline Models
 
 ### Task1: Boundary Captioning
-
+![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Captioning_res.png)
 #### Preparing evaluation package
 To run Boundary Captioning task, you need to download the package https://github.com/LuoweiZhou/coco-caption/tree/de6f385503ac9a4305a1dcdc39c02312f9fa13fc/pycocoevalcap and put it under `utils` folder as:
 
