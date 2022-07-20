@@ -17,9 +17,9 @@ In the evaluation of downstream tasks, we select one annotator whose labeled bou
 
 **Here we release 2 versions of dataset:**
 
-a) **[Filtered datasets](https://drive.google.com/drive/folders/1KlFQO__GuUlue_4uCj5oBzzx357D9WE_?usp=sharing) (Recommended)** used in our paper, which has been adjusted for downstream task, including 40K filtered boundaries.
+a) **Filtered datasets (Recommended)** [[Download](https://drive.google.com/drive/folders/1KlFQO__GuUlue_4uCj5oBzzx357D9WE_?usp=sharing)] used in our paper, which has been adjusted for downstream task, including 40K filtered boundaries.
 
-b) **[Raw annotation](https://drive.google.com/drive/folders/1ZEoqsr9gy4FluRhSQgIBp2NiYWVIhcsQ?usp=sharing)** that could be used as supplement in training your own model, including 170K boundaries.
+b) **Raw annotation** [[Download](https://drive.google.com/drive/folders/1ZEoqsr9gy4FluRhSQgIBp2NiYWVIhcsQ?usp=sharing)] that could be used as supplement in training your own model, including 170K boundaries.
 
 Note that our paper uses version a) in the evaluation of our model, please also evaluated your own model with version a) in future comparisons.
 
@@ -38,12 +38,12 @@ Note that the version of `pytorch-transformer` we use is `1.0.0`.
 ### Task1: Boundary Captioning
 ![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Captioning_res.png)
 #### Preparing evaluation package
-To run Boundary Captioning task, you need to download the **[evaluation package](https://github.com/LuoweiZhou/coco-caption/tree/de6f385503ac9a4305a1dcdc39c02312f9fa13fc/pycocoevalcap)** and put it under `utils` folder as:
+To run Boundary Captioning task, you need to download the **evaluation package** [Download](https://github.com/LuoweiZhou/coco-caption/tree/de6f385503ac9a4305a1dcdc39c02312f9fa13fc/pycocoevalcap) and put it under `utils` folder as:
 
 `GEBC/utils/pycocoevalcap`
 
 #### Preparing features
-To run Boundary Captioning task, you need to download and unzip the **[features](https://drive.google.com/drive/folders/1E-KML1rU_gd6CF4nkkNG8Jm3Cq6VBYRR?usp=sharing)**, make sure you have the following path:
+To run Boundary Captioning task, you need to download and unzip the **features** [Download](https://drive.google.com/drive/folders/1E-KML1rU_gd6CF4nkkNG8Jm3Cq6VBYRR?usp=sharing), make sure you have the following path:
 
 `GEBC/datasets/features/region_feature`
 
