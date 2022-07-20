@@ -17,9 +17,9 @@ In the evaluation of downstream tasks, we select one annotator whose labeled bou
 
 **Here we release 2 versions of dataset:**
 
-a) [Filtered datasets](https://drive.google.com/drive/folders/1KlFQO__GuUlue_4uCj5oBzzx357D9WE_?usp=sharing) (Recommended) following the adjustment method in our paper, which is employed in evaluation.
+a) [Filtered datasets](https://drive.google.com/drive/folders/1KlFQO__GuUlue_4uCj5oBzzx357D9WE_?usp=sharing) (Recommended) used in our paper, which has been adjusted for downstream task. This version includes 40K filtered boundaries.
 
-b) [Raw annotation](https://drive.google.com/drive/folders/1ZEoqsr9gy4FluRhSQgIBp2NiYWVIhcsQ?usp=sharing) that could be used as supplement in training your own model.
+b) [Raw annotation](https://drive.google.com/drive/folders/1ZEoqsr9gy4FluRhSQgIBp2NiYWVIhcsQ?usp=sharing) that could be used as supplement in training your own model. This version includes 170K boundaries.
 
 Note that our paper uses version a) in the evaluation of our model, please also evaluated your own model with version a) in future comparisons.
 
