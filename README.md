@@ -25,6 +25,10 @@ Note that our paper uses version a) in the evaluation of our model, please also 
 
 ## Using Our Baseline Models
 
+Clone the project to run our baseline models:
+
+`git clone https://github.com/Yuxuan-W/GEB-Plus.git`
+
 ### Task1: Boundary Captioning
 ![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Captioning_res.png)
 #### Preparing evaluation package
