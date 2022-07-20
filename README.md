@@ -15,9 +15,9 @@ We evaluate many representative baselines in our dataset, where we also design a
 In our **Kinetic-GEB+** dataset, each video contains 1 to 8 annotations from different annotators and each annotation consists of several boundaries inside a video, where the boundaries' location are not the same. 
 In the evaluation of downstream tasks, we select one annotator whose labeled boundaries are most consistent with others to reduce noise and duplication. Then, we use these boundaries’ timestamps as the anchors to merge other annotators’ captions, preserving the diversity of different opinions. Thus, one video corresponds to multiple boundaries, and each boundary could be with multiple captions. Finally, this selection includes 40k anchors from all videos.
 
-Here we release 2 versions of dataset:
+**Here we release 2 versions of dataset:**
 
-a) [Filtered datasets](https://drive.google.com/drive/folders/1KlFQO__GuUlue_4uCj5oBzzx357D9WE_?usp=sharing) following the adjustment method in our paper, which is employed in evaluation. (Recommended)
+a) (Recommended) [Filtered datasets](https://drive.google.com/drive/folders/1KlFQO__GuUlue_4uCj5oBzzx357D9WE_?usp=sharing) following the adjustment method in our paper, which is employed in evaluation.
 
 b) [Raw annotation](https://drive.google.com/drive/folders/1ZEoqsr9gy4FluRhSQgIBp2NiYWVIhcsQ?usp=sharing) that could be used as supplement in training your own model.
 
