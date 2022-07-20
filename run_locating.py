@@ -13,7 +13,7 @@ from torch.utils.tensorboard import SummaryWriter
 from utils.basic_utils import set_seed, get_current_timestamp, remove_rows_cols
 from utils.logging_utils import setup_logger
 from utils.evaluation_utils import evaluate_on_locating2stream
-from datasets.locating_two_stream_dataset import LocatingTwoStreamDataset, LocatingTwoStreamCorpusDataset, CustomBatchSampler
+from datasets.locating_dataset import LocatingTwoStreamDataset, LocatingTwoStreamCorpusDataset, CustomBatchSampler
 from modeling.modeling_bert import BertForVideoRetrieval
 from pytorch_transformers import BertTokenizer, BertConfig, AdamW, WarmupLinearSchedule
 
