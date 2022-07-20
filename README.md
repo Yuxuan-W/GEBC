@@ -33,7 +33,7 @@ Clone our conda environment using:
 
 `conda env create -n ENVNAME --file environment.yml`
 
-Note that the version of `pytorch-transformer` we use is version `1.0.0`.
+Note that the version of `pytorch-transformer` we use is `1.0.0`.
 
 ### Task1: Boundary Captioning
 ![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Captioning_res.png)
