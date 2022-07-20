@@ -11,6 +11,7 @@ We evaluate many representative baselines in our dataset, where we also design a
 
 ![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Tasks.png)
 
+&emsp
 ## Using Kinetic-GEBC Dataset
 In our **Kinetic-GEB+** dataset, each video contains 1 to 8 annotations from different annotators and each annotation consists of several boundaries inside a video, where the boundaries' location are not the same. 
 In the evaluation of downstream tasks, we select one annotator whose labeled boundaries are most consistent with others to reduce noise and duplication. Then, we use these boundaries’ timestamps as the anchors to merge other annotators’ captions, preserving the diversity of different opinions. Thus, one video corresponds to multiple boundaries, and each boundary could be with multiple captions. Finally, this selection includes 40k anchors from all videos.
@@ -23,7 +24,7 @@ b) **Raw annotation** [[Download](https://drive.google.com/drive/folders/1ZEoqsr
 
 Note that our paper uses version a) in the evaluation of our model, please also evaluated your own model with version a) in future comparisons.
 
-
+&emsp
 ## Prepare to Use Our Baseline Models
 
 Clone the project to run our baseline models:
@@ -36,7 +37,7 @@ Clone our conda environment using:
 
 Note that the version of `pytorch-transformer` we use is `1.0.0`.
 
-
+&emsp
 ## Task1: Boundary Captioning
 ![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Captioning_res.png)
 #### Preparing evaluation package
@@ -62,7 +63,7 @@ Unzip the folder to your project, execute the following command:
 
 `python run_captioning.py --do_test --do_eval --ablation obj --eval_model_dir $YOUR_UNZIPPED_DIR$`
 
-
+&emsp
 ## Task2: Boundary Grounding
 ![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Grounding_res.png)
 #### Preparing features
