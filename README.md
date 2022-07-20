@@ -107,3 +107,22 @@ Or if you want to use GEBD proposals in testing:
 
 ## Task3: Boundary Caption-Text Retrieval
 ![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Retrieval_res.png)
+
+### Preparing features
+To run Boundary Grounding task, you need to download and unzip the **features** [[Download](https://drive.google.com/drive/folders/1E-KML1rU_gd6CF4nkkNG8Jm3Cq6VBYRR?usp=sharing)], make sure you have the following path:
+
+`GEBC/datasets/features/region_feature`
+
+`GEBC/datasets/features/tsn_gebd_feature`
+
+### Training from scratch
+To train on the grounding baseline, execute the following command:
+
+`python run_retrieval.py --do_train --do_test --do_eval --ablation obj --evaluate_during_training`
+
+### Testing our trained model
+We only provide the checkpoint that generating our highest score in the paper [[Download](https://drive.google.com/file/d/1N39sNwCxUIxperDZZ3WhNSCafmL1diqb/view?usp=sharing)].
+Unzip the folder to your project, execute the following command:
+
+`python run_retrieval.py --do_test --do_eval --ablation obj --eval_model_dir $YOUR_UNZIPPED_DIR$`
+
