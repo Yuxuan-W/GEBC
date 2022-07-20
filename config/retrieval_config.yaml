@@ -1,0 +1,9 @@
+train_annotation: datasets/annotations/train.json
+test_annotation: datasets/annotations/test.json
+val_annotation: datasets/annotations/val.json
+train_gebd_proposals: datasets/annotations/trainset_gebd_proposals.json
+test_gebd_proposals: datasets/annotations/testset_gebd_proposals.json
+val_gebd_proposals: datasets/annotations/valset_gebd_proposals.json
+region_feature_root: datasets/features/region_feature
+action_feature_root: datasets/features/tsn_captioning_feature
+action_gebd_feature_root: datasets/features/tsn_gebd_feature
