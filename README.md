@@ -1,5 +1,6 @@
 # GEB+: A Benchmark for Generic Event Boundary Captioning, Grounding and Retrieval
 [Yuxuan Wang](https://yuxuanw.me), [Difei Gao](https://scholar.google.com/citations?user=No9OsocAAAAJ&hl=en), [Licheng Yu](https://lichengunc.github.io), Stan Weixian Lei, Matt Feiszli, and [Mike Zheng Shou](https://sites.google.com/view/showlab)
+National University of Singapore, Meta AI
 
 ![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Cover.png)
 
