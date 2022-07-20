@@ -45,3 +45,9 @@ To run the captioning baseline, execute the following command:
 `python run_captioning.py --do_train --ablation obj --evaluate_during_training`
 
 You can customize the argument following the annotation, but note that we do not provide annotation of testset so it might cause trouble to use  `--do_test` config.
+
+### Task2: Boundary Grounding
+![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Grounding_res.png)
+
+### Task3: Boundary Caption-Text Retrieval
+![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Retrieval_res.png)
