@@ -1,4 +1,6 @@
-# GEBC
+# GEB+: A Benchmark for Generic Event Boundary Captioning, Grounding and Retrieval
+
+![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Cover.png)
 
 ## Preparing evaluation package
 Download the package https://github.com/LuoweiZhou/coco-caption/tree/de6f385503ac9a4305a1dcdc39c02312f9fa13fc/pycocoevalcap and put it under `utils` folder as:
