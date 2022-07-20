@@ -25,13 +25,15 @@ Note that our paper uses version a) in the evaluation of our model, please also 
 
 ## Using Our Baseline Models
 
-### Preparing evaluation package (Boundary Captioning)
+### Task: Boundary Captioning
+
+#### Preparing evaluation package
 To run Boundary Captioning task, you need to download the package https://github.com/LuoweiZhou/coco-caption/tree/de6f385503ac9a4305a1dcdc39c02312f9fa13fc/pycocoevalcap and put it under `utils` folder as:
 
 `GEBC/utils/pycocoevalcap`
 
-### Preparing features
-Download and unzip the features from our listed google drive link: https://drive.google.com/drive/folders/1E-KML1rU_gd6CF4nkkNG8Jm3Cq6VBYRR?usp=sharing, make sure you have the following path:
+#### Preparing features
+To run Boundary Captioning task, you need to download and unzip the features from our listed google drive link: https://drive.google.com/drive/folders/1E-KML1rU_gd6CF4nkkNG8Jm3Cq6VBYRR?usp=sharing, make sure you have the following path:
 
 `GEBC/datasets/features/region_feature`
 
