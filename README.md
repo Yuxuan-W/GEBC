@@ -12,8 +12,9 @@ We evaluate many representative baselines in our dataset, where we also design a
 ![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Tasks.png)
 
 ## Using Kinetic-GEBC Dataset
-In total, our Kinetic-GEBC dataset includes 176,681 boundaries in 12,434 videos selected from all categories in Kinetic-400. Each annotation consists of several boundaries inside a video. Each video contains 1 to 8 annotations from different annotators, where the boundaries' location are not the same. 
-In the evaluation of downstream tasks, we select one annotator whose labeled boundaries are mostly consistent with others to reduce noise and duplication. Then, we use these boundaries’ timestamps as the anchors to merge other annotators’ captions, preserving the diversity of different opinions. Thus, one video corresponds to multiple boundaries, and each boundary could be with multiple captions. Finally, this selection includes 40k anchors from all videos.
+In our **Kinetic-GEB+** dataset, each video contains 1 to 8 annotations from different annotators and each annotation consists of several boundaries inside a video, where the boundaries' location are not the same. 
+In the evaluation of downstream tasks, we select one annotator whose labeled boundaries are most consistent with others to reduce noise and duplication. Then, we use these boundaries’ timestamps as the anchors to merge other annotators’ captions, preserving the diversity of different opinions. Thus, one video corresponds to multiple boundaries, and each boundary could be with multiple captions. Finally, this selection includes 40k anchors from all videos.
+
 Participants could choose to use either version of dataset to train their models:
 a) Full train set including all annotations towards each video.
 b) Filtered train and validation set only including the annotations with highest consistency towards each video.
