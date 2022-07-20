@@ -25,19 +25,19 @@ Note that our paper uses version a) in the evaluation of our model, please also 
 
 ## Using Our Baseline Models
 
-## Preparing evaluation package
+### Preparing evaluation package
 Download the package https://github.com/LuoweiZhou/coco-caption/tree/de6f385503ac9a4305a1dcdc39c02312f9fa13fc/pycocoevalcap and put it under `utils` folder as:
 
 `GEBC/utils/pycocoevalcap`
 
-## Preparing features
+### Preparing features
 Download and unzip the features from our listed google drive link: https://drive.google.com/drive/folders/1E-KML1rU_gd6CF4nkkNG8Jm3Cq6VBYRR?usp=sharing, make sure you have the following path:
 
 `GEBC/datasets/features/region_feature`
 
 `GEBC/datasets/features/tsn_captioning_feature`
 
-## Run the baseline
+### Run the baseline
 To run the captioning baseline, execute the following command:
 
 `python run_captioning.py --do_train --ablation obj --evaluate_during_training`
