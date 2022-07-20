@@ -13,7 +13,7 @@ from torch.utils.tensorboard import SummaryWriter
 from utils.basic_utils import set_seed, get_current_timestamp, remove_rows_cols
 from utils.logging_utils import setup_logger
 from utils.evaluation_utils import evaluate_on_locating2stream
-from datasets.locating_dataset import LocatingTwoStreamDataset, LocatingTwoStreamCorpusDataset, CustomBatchSampler
+from datasets.grounding_dataset import LocatingTwoStreamDataset, LocatingTwoStreamCorpusDataset, CustomBatchSampler
 from modeling.modeling_bert import BertForVideoRetrieval
 from pytorch_transformers import BertTokenizer, BertConfig, AdamW, WarmupLinearSchedule
 
@@ -23,7 +23,7 @@ from pytorch_transformers import BertTokenizer, BertConfig, AdamW, WarmupLinearS
 
 
 def get_predict_file(output_dir, args):
-    cc = ['locating_two_stream', 'pred']
+    cc = ['grounding', 'pred']
     return os.path.join(output_dir, '{}.json'.format('.'.join(cc)))
 
 
@@ -32,7 +32,7 @@ def build_tensorboard_writer(args):
         ablation = 'full'
     else:
         ablation = 'wo-' + '-'.join(args.ablation)
-    tensorboard_dir = os.path.join(args.output_dir, 'pwl2stream_tensorboard-{}-{}'.format(ablation, get_current_timestamp()))
+    tensorboard_dir = os.path.join(args.output_dir, 'grounding_tensorboard-{}-{}'.format(ablation, get_current_timestamp()))
     if os.path.exists(tensorboard_dir):
         shutil.rmtree(tensorboard_dir)
     os.mkdir(tensorboard_dir)
@@ -127,7 +127,7 @@ def save_checkpoint(model, tokenizer, args, epoch, iteration, num_trial=10):
         ablation = 'full'
     else:
         ablation = 'wo-' + '-'.join(args.ablation)
-    checkpoint_dir = os.path.join(args.output_dir, 'pwl2stream_checkpoint-{}-{}-{}-{}'.format(
+    checkpoint_dir = os.path.join(args.output_dir, 'grounding_checkpoint-{}-{}-{}-{}'.format(
         ablation, epoch, iteration, get_current_timestamp()))
     if os.path.exists(checkpoint_dir):
         shutil.rmtree(checkpoint_dir)
@@ -519,11 +519,9 @@ def test(args, test_dataloader, test_corpus_dataloader, model, output_dir):
                 'input_ids': batch[0], 'attention_mask': batch[1], 'obj_feats': None, 'frame_feats': None,
                 'frame_feats_diff': None, 'act_feats': None, 'act_feats_diff': None
             }
-            a = batch[0].detach().cpu().numpy()
             tic = time.time()
             # collect caption embeddings
             cap_embedding, _ = model(**cap_inputs, do_ctx=False)
-            a = cap_embedding.detach().cpu().numpy()
             time_meter += time.time() - tic
             for idx in range(len(boundary_ids)):
                 bid = boundary_ids[idx]
