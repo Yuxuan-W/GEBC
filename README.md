@@ -23,6 +23,7 @@ b) **Raw annotation** [[Download](https://drive.google.com/drive/folders/1ZEoqsr
 
 Note that our paper uses version a) in the evaluation of our model, please also evaluated your own model with version a) in future comparisons.
 
+
 ## Prepare to Use Our Baseline Models
 
 Clone the project to run our baseline models:
@@ -35,7 +36,8 @@ Clone our conda environment using:
 
 Note that the version of `pytorch-transformer` we use is `1.0.0`.
 
-## Using Baseline Model: Boundary Captioning
+
+## Task1: Boundary Captioning
 ![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Captioning_res.png)
 #### Preparing evaluation package
 To run Boundary Captioning task, you need to download the **evaluation package** [[Download](https://github.com/LuoweiZhou/coco-caption/tree/de6f385503ac9a4305a1dcdc39c02312f9fa13fc/pycocoevalcap)] and put it under `utils` folder as:
@@ -60,7 +62,8 @@ Unzip the folder to your project, execute the following command:
 
 `python run_captioning.py --do_test --do_eval --ablation obj --eval_model_dir $YOUR_UNZIPPED_DIR$`
 
-## Using Baseline Model: Boundary Grounding
+
+## Task2: Boundary Grounding
 ![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Grounding_res.png)
 #### Preparing features
 To run Boundary Grounding task, you need to download and unzip the features, make sure you have the following path:
@@ -69,5 +72,6 @@ To run Boundary Grounding task, you need to download and unzip the features, mak
 
 `GEBC/datasets/features/tsn_captioning_feature`
 
-## Using Baseline Model: Boundary Caption-Text Retrieval
+
+## Task3: Boundary Caption-Text Retrieval
 ![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Retrieval_res.png)
