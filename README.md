@@ -74,7 +74,7 @@ Unzip the folder to your project, execute the following command:
 Like we mentioned in the paper, we use two schemes of frame sampling when proposing the timestamp candidates who might be the answer. By default, we sampled one candidates every 3 frames (0.1s), or we used the baseline of GEBD to generate proposals. Here we provide implementations for both of them.
 
 ### Preparing features
-To run Boundary Grounding task, you need to download and unzip the features, make sure you have the following path:
+To run Boundary Grounding task, you need to download and unzip the **features** [[Download](https://drive.google.com/drive/folders/1E-KML1rU_gd6CF4nkkNG8Jm3Cq6VBYRR?usp=sharing)], make sure you have the following path:
 
 `GEBC/datasets/features/region_feature`
 
