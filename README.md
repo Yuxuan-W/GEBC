@@ -17,7 +17,7 @@ In the evaluation of downstream tasks, we select one annotator whose labeled bou
 
 **Here we release 2 versions of dataset:**
 
-a) (Recommended) [Filtered datasets](https://drive.google.com/drive/folders/1KlFQO__GuUlue_4uCj5oBzzx357D9WE_?usp=sharing) following the adjustment method in our paper, which is employed in evaluation.
+a) [Filtered datasets] (Recommended)(https://drive.google.com/drive/folders/1KlFQO__GuUlue_4uCj5oBzzx357D9WE_?usp=sharing) following the adjustment method in our paper, which is employed in evaluation.
 
 b) [Raw annotation](https://drive.google.com/drive/folders/1ZEoqsr9gy4FluRhSQgIBp2NiYWVIhcsQ?usp=sharing) that could be used as supplement in training your own model.
 
