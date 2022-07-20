@@ -38,12 +38,12 @@ Note that the version of `pytorch-transformer` we use is `1.0.0`.
 ### Task1: Boundary Captioning
 ![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Captioning_res.png)
 #### Preparing evaluation package
-To run Boundary Captioning task, you need to download the **evaluation package** [Download](https://github.com/LuoweiZhou/coco-caption/tree/de6f385503ac9a4305a1dcdc39c02312f9fa13fc/pycocoevalcap) and put it under `utils` folder as:
+To run Boundary Captioning task, you need to download the **evaluation package** [[Download](https://github.com/LuoweiZhou/coco-caption/tree/de6f385503ac9a4305a1dcdc39c02312f9fa13fc/pycocoevalcap)] and put it under `utils` folder as:
 
 `GEBC/utils/pycocoevalcap`
 
 #### Preparing features
-To run Boundary Captioning task, you need to download and unzip the **features** [Download](https://drive.google.com/drive/folders/1E-KML1rU_gd6CF4nkkNG8Jm3Cq6VBYRR?usp=sharing), make sure you have the following path:
+To run Boundary Captioning task, you need to download and unzip the **features** [[Download](https://drive.google.com/drive/folders/1E-KML1rU_gd6CF4nkkNG8Jm3Cq6VBYRR?usp=sharing)], make sure you have the following path:
 
 `GEBC/datasets/features/region_feature`
 
