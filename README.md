@@ -70,12 +70,38 @@ Unzip the folder to your project, execute the following command:
 
 ## Task2: Boundary Grounding
 ![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Grounding_res.png)
-#### Preparing features
+
+Like we mentioned in the paper, we use two schemes of frame sampling when proposing the timestamp candidates who might be the answer. By default, we sampled one candidates every 3 frames (0.1s), or we used the baseline of GEBD to generate proposals. Here we provide implementations for both of them.
+
+### Preparing features
 To run Boundary Grounding task, you need to download and unzip the features, make sure you have the following path:
 
 `GEBC/datasets/features/region_feature`
 
-`GEBC/datasets/features/tsn_captioning_feature`
+If not using GEBD proposals (By Default), you will need:
+`GEBC/datasets/features/tsn_all1s_feature`
+
+If using GEBD proposals, you will need:
+`GEBC/datasets/features/tsn_gebd_feature`
+
+### Training from scratch
+To train on the grounding baseline, execute the following command:
+
+`python run_grounding.py --do_train --do_test --do_eval --ablation obj --evaluate_during_training` (By Default)
+
+Or if you want to use GEBD proposals in followed validation and testing after training is finished:
+
+`python run_grounding.py --do_train --do_test --do_eval --use_gebd --ablation obj --evaluate_during_training` (Use GEBD)
+
+### Testing our trained model
+We only provide the checkpoint that generating our highest score in the paper [[Download](https://drive.google.com/file/d/1TcBGDk8y_AXOaiTLbY0kQ5PBws9-o8jn/view?usp=sharing)].
+Unzip the folder to your project, execute the following command:
+
+`python run_grounding.py --do_test --do_eval --ablation obj --eval_model_dir $YOUR_UNZIPPED_DIR$` (By Default)
+
+Or if you want to use GEBD proposals in testing:
+
+`python run_grounding.py --do_test --do_eval --use_gebd --ablation obj --eval_model_dir $YOUR_UNZIPPED_DIR$` (Use GEBD)
 
 <br/>
 
