@@ -51,8 +51,7 @@ class CaptioningDataset(Dataset):
         self.max_object_per_frame = args.max_object_per_frame
         self.max_object_length = (2 * self.max_frame_num + 1) * self.max_object_per_frame
         self.max_frame_length = 2 * self.max_frame_num + 1
-        self.max_frame_difference_length = self.max_frame_num ** 2 + self.max_frame_num * 2
-        self.max_frame_difference_length = 1
+        self.max_frame_difference_length = self.max_frame_num * 2 + self.max_frame_num ** 2
         self.max_action_length = args.max_action_length
         self.max_seq_length = self.max_token_length + self.max_object_length + \
                               self.max_frame_length + self.max_frame_difference_length + self.max_action_length
@@ -70,7 +69,7 @@ class CaptioningDataset(Dataset):
         boundary = self.boundary_list[idx]
         boundary_id = boundary['boundary_id']
         video_id = boundary_id[:11]
-        boundary_idx = int(boundary_id.split('_')[-1])
+        boundary_idx = int(boundary_id.split('_')[-1][:-1])
         timestamps = [boundary['prev_timestamp'], boundary['timestamp'], boundary['next_timestamp']]
         if not self.use_gebd:
             caption = boundary['caption']
@@ -277,18 +276,18 @@ class CaptioningDataset(Dataset):
     @staticmethod
     def generate_difference(feat_dict, is_action=False):
         difference_seq = []
-        if is_action:   # remove this line
-            for idx_be in range(feat_dict['before'].shape[0]):
-                for idx_af in range(feat_dict['after'].shape[0]):
-                    difference_seq.append(np.concatenate((feat_dict['before'][idx_be], feat_dict['after'][idx_af])))
-        else: # remove this "else"
-            difference_seq.append(np.concatenate((feat_dict['before'].max(axis=0), feat_dict['after'].max(axis=0))))
+        # if is_action:   # remove this line
+        for idx_be in range(feat_dict['before'].shape[0]):
+            for idx_af in range(feat_dict['after'].shape[0]):
+                difference_seq.append(np.concatenate((feat_dict['before'][idx_be], feat_dict['after'][idx_af])))
+        # else: # remove this "else"
+        #     difference_seq.append(np.concatenate((feat_dict['before'].max(axis=0), feat_dict['after'].max(axis=0))))
 
-        # if not is_action:
-        #     for idx_be in range(feat_dict['before'].shape[0]):
-        #         difference_seq.append(np.concatenate((feat_dict['before'][idx_be], feat_dict['boundary'][0])))
-        #     for idx_af in range(feat_dict['after'].shape[0]):
-        #         difference_seq.append(np.concatenate((feat_dict['boundary'][0], feat_dict['after'][idx_af])))
+        if not is_action:
+            for idx_be in range(feat_dict['before'].shape[0]):
+                difference_seq.append(np.concatenate((feat_dict['before'][idx_be], feat_dict['boundary'][0])))
+            for idx_af in range(feat_dict['after'].shape[0]):
+                difference_seq.append(np.concatenate((feat_dict['boundary'][0], feat_dict['after'][idx_af])))
         return np.array(difference_seq)
 
     def zero_padding(self, feat_dict, feat_type):
@@ -360,7 +359,7 @@ if __name__ == '__main__':
 
     tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
-    dataset = CaptioningDataset(args, tokenizer, 'train', use_gebd=True)
-    dataloader = DataLoader(dataset=dataset, batch_size=64)
+    dataset = CaptioningDataset(args, tokenizer, 'test', use_gebd=False)
+    dataloader = DataLoader(dataset=dataset, batch_size=1, shuffle=False)
     for batch in tqdm(dataloader):
         a = 1

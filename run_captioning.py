@@ -231,9 +231,9 @@ def evaluate(args, val_dataloader, model, tokenizer, output_dir):
     gt = split_gt_parts(gt_dict)
     pred = split_pred_parts(pred_dict)
 
-    res_pred_sub = evaluate_on_caption(pred['subject'], gt['subject'])
-    res_pred_bef = evaluate_on_caption(pred['before'], gt['before'])
-    res_pred_aft = evaluate_on_caption(pred['after'], gt['after'])
+    res_pred_sub = evaluate_on_caption(pred['subject'], gt['subject'], outfile=evaluate_file)
+    res_pred_bef = evaluate_on_caption(pred['before'], gt['before'], outfile=evaluate_file)
+    res_pred_aft = evaluate_on_caption(pred['after'], gt['after'], outfile=evaluate_file)
 
     logger.info('\n ****************** Evaluation Results ******************')
     logger.info('Subject: ', res_pred_sub)
@@ -321,10 +321,10 @@ def main():
     parser.add_argument("--do_test", action='store_true', help="Whether to run inference.")
     parser.add_argument("--do_eval", action='store_true', help="Whether to run evaluation.")
     parser.add_argument("--ablation", default=None, help="Ablation set, e.g.'obj-frame'")
-    parser.add_argument('--gpu_ids', type=str, default='5')
-    parser.add_argument("--per_gpu_train_batch_size", default=2, type=int,
+    parser.add_argument('--gpu_ids', type=str, default='3 4 5 6 7')
+    parser.add_argument("--per_gpu_train_batch_size", default=32, type=int,
                         help="Batch size per GPU/CPU for training.")
-    parser.add_argument("--per_gpu_eval_batch_size", default=8, type=int,
+    parser.add_argument("--per_gpu_eval_batch_size", default=30, type=int,
                         help="Batch size per GPU/CPU for evaluation.")
 
     # hyper-param for training
