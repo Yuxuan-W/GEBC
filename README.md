@@ -15,11 +15,13 @@ We evaluate many representative baselines in our dataset, where we also design a
 In our **Kinetic-GEB+** dataset, each video contains 1 to 8 annotations from different annotators and each annotation consists of several boundaries inside a video, where the boundaries' location are not the same. 
 In the evaluation of downstream tasks, we select one annotator whose labeled boundaries are most consistent with others to reduce noise and duplication. Then, we use these boundaries’ timestamps as the anchors to merge other annotators’ captions, preserving the diversity of different opinions. Thus, one video corresponds to multiple boundaries, and each boundary could be with multiple captions. Finally, this selection includes 40k anchors from all videos.
 
-Participants could choose to use either version of dataset to train their models:
-a) Full train set including all annotations towards each video.
-b) Filtered train and validation set only including the annotations with highest consistency towards each video.
-After that, participants could generate captions for test set timestamps. Note that, the ground truths used in our testing process only includes the annotations with highest consistency.
-In comparison of most relevant datasets in video captioning, our Kinetic-GEBC is the first one targeting on the captioning of generic event boundaries.
+Here we release 2 versions of dataset:
+
+a) [Filtered datasets](https://drive.google.com/drive/folders/1KlFQO__GuUlue_4uCj5oBzzx357D9WE_?usp=sharing) following the adjustment method in our paper, which is employed in evaluation. (Recommended)
+
+b) [Raw annotation](https://drive.google.com/drive/folders/1ZEoqsr9gy4FluRhSQgIBp2NiYWVIhcsQ?usp=sharing) that could be used as supplement in training your own model.
+
+Note that our paper uses version a) in the evaluation of our model, please also evaluated your own model with version a) in future comparisons.
 
 ## Preparing evaluation package
 Download the package https://github.com/LuoweiZhou/coco-caption/tree/de6f385503ac9a4305a1dcdc39c02312f9fa13fc/pycocoevalcap and put it under `utils` folder as:
