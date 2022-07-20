@@ -39,12 +39,16 @@ To run Boundary Captioning task, you need to download and unzip the features fro
 
 `GEBC/datasets/features/tsn_captioning_feature`
 
-### Run the baseline
-To run the captioning baseline, execute the following command:
+#### Training from scratch
+To train on the captioning baseline, execute the following command:
 
-`python run_captioning.py --do_train --ablation obj --evaluate_during_training`
+`python run_captioning.py --do_train --do_test --do_eval --ablation obj --evaluate_during_training`
 
-You can customize the argument following the annotation, but note that we do not provide annotation of testset so it might cause trouble to use  `--do_test` config.
+#### Testing our trained model
+We only provide the checkpoint that generating our highest score in the paper [[Download]()].
+Unzip the folder to your project, execute the following command:
+
+`python run_captioning.py --do_test --do_eval --ablation obj --eval_model_dir $YOUR_UNZIPPED_DIR$`
 
 ### Task2: Boundary Grounding
 ![image](https://github.com/Yuxuan-W/GEB-Plus/blob/master/figures/Grounding_res.png)
