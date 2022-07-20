@@ -23,6 +23,8 @@ b) **[Raw annotation](https://drive.google.com/drive/folders/1ZEoqsr9gy4FluRhSQg
 
 Note that our paper uses version a) in the evaluation of our model, please also evaluated your own model with version a) in future comparisons.
 
+## Using Our Baseline Models
+
 ## Preparing evaluation package
 Download the package https://github.com/LuoweiZhou/coco-caption/tree/de6f385503ac9a4305a1dcdc39c02312f9fa13fc/pycocoevalcap and put it under `utils` folder as:
 
